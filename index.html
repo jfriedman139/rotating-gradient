@@ -7,13 +7,16 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<link href="assets/css/gradient.css" rel="stylesheet" type="text/css">
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	<script type="text/javascript" src="assets/js/vue.js" async></script>
+  	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   	crossorigin="anonymous"></script>
 </head>
 <body>
 
-	<div id="circle"></div>
+	<div id="app" v-on:mousemove="mouseMove" v-bind:style="{ background: 'linear-gradient(' + outer + 'deg, #23074d, #cc5333)' }">
+		<div id="circle" v-bind:style="{ background: 'linear-gradient(' + circle + 'deg, #23074d, #cc5333)' }"></div>
+	</div>
 
-<script type="text/javascript" src="assets/js/gradient.js"></script>    
+<script type="text/javascript" src="assets/js/gradient.js" async></script>
 </body>
 </html>
