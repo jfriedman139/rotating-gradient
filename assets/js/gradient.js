@@ -1,37 +1,41 @@
-$(document).ready(function(){
+/*JQUERY METHOD*/
 
-	var outer = $('body');
+/*$(document).ready(function(){
+
+	var outer = $('#app');
 	var circle = $('#circle');
 	var outerDeg = 0;
 	var circleDeg = 180;
-	var hover = false;
 
-
-	//Run function every 20 ms	
-	setInterval(function() {
-
-		//if hover is still active incriment / decrement the degree of the angle of the gradient by 1
-		if (hover) {
-			outer.css({
+	//on mouse move incriment and decrement the degree of the angle of the gradient
+	outer.mousemove(function() {
+		outer.css({
 				"background": "linear-gradient(" + outerDeg + "deg, #23074d, #cc5333)",
 				"background": "-webkit-linear-gradient(" + outerDeg + "deg, #23074d, #cc5333)"
-			});
-			circle.css({
+		});
+		circle.css({
 				"background": "linear-gradient(" + circleDeg + "deg, #23074d, #cc5333)",
 				"background": "-webkit-linear-gradient(" + circleDeg + "deg, #23074d, #cc5333)"
-			});
-			outerDeg += 1;
-			circleDeg -= 1;
-		}
-	}, 20);
-
-	//set global hover state
-	outer.hover(function() {
-		if (hover) {
-			hover = false;
-		} else {
-			hover = true;
-		}
+		});
+		outerDeg += 5;
+		circleDeg -= 5;
 	});
+});*/
+
+/*VUE METHOD*/
+
+new Vue({
+	el: '#app',
+	data: {
+		outer: 0,
+		circle: 180
+	},
+	methods: {
+		//on mouse move incriment and decrement the degree of the angle of the gradient
+		mouseMove: function() {
+			this.outer += 5;
+			this.circle -= 5;
+		}
+	}
 })
 
