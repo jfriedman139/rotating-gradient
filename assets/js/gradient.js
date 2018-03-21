@@ -7,7 +7,7 @@
 	var outerDeg = 0;
 	var circleDeg = 180;
 
-	//on mouse move incriment and decrement the degree of the angle of the gradient
+	//on mouse move increment and decrement the degree of the angle of the gradient
 	outer.mousemove(function() {
 		outer.css({
 				"background": "linear-gradient(" + outerDeg + "deg, #23074d, #cc5333)",
@@ -31,7 +31,7 @@ new Vue({
 		circle: 180
 	},
 	methods: {
-		//on mouse move incriment and decrement the degree of the angle of the gradient
+		//on mouse move increment and decrement the degree of the angle of the gradient
 		mouseMove: function() {
 			this.outer += 5;
 			this.circle -= 5;
